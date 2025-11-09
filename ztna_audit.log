@@ -1,0 +1,195 @@
+2025-11-08 23:50:19,140 - ztna_audit - INFO - ZTNA Audit Logger initialized.
+2025-11-08 23:50:19,144 - ztna_audit - INFO - ✅ Connected to Redis server.
+2025-11-08 23:50:19,164 - ztna_audit - INFO - ✅ Connected to MongoDB server.
+2025-11-08 23:51:33,922 - ztna_audit - INFO - ZTNA Audit Logger initialized.
+2025-11-08 23:51:33,929 - ztna_audit - INFO - ✅ Connected to Redis server.
+2025-11-08 23:51:33,937 - ztna_audit - INFO - ✅ Connected to MongoDB server.
+2025-11-08 23:53:12,955 - ztna_audit - INFO - ZTNA Audit Logger initialized.
+2025-11-08 23:53:12,970 - ztna_audit - INFO - ✅ Connected to Redis server.
+2025-11-08 23:53:12,976 - ztna_audit - INFO - ✅ Connected to MongoDB server.
+2025-11-08 23:53:18,415 - ztna_audit - INFO - ZTNA Audit Logger initialized.
+2025-11-08 23:53:18,419 - ztna_audit - INFO - ✅ Connected to Redis server.
+2025-11-08 23:53:18,427 - ztna_audit - INFO - ✅ Connected to MongoDB server.
+2025-11-08 23:53:47,852 - ztna_audit - INFO - ZTNA Audit Logger initialized.
+2025-11-08 23:53:47,856 - ztna_audit - INFO - ✅ Connected to Redis server.
+2025-11-08 23:53:47,864 - ztna_audit - INFO - ✅ Connected to MongoDB server.
+2025-11-08 23:54:13,847 - ztna_audit - INFO - ZTNA Audit Logger initialized.
+2025-11-08 23:54:13,851 - ztna_audit - INFO - ✅ Connected to Redis server.
+2025-11-08 23:54:13,858 - ztna_audit - INFO - ✅ Connected to MongoDB server.
+2025-11-08 23:54:14,255 - ztna_audit - INFO - ZTNA Audit Logger initialized.
+2025-11-08 23:54:14,260 - ztna_audit - INFO - ✅ Connected to Redis server.
+2025-11-08 23:54:14,264 - ztna_audit - INFO - ✅ Connected to MongoDB server.
+2025-11-08 23:55:05,049 - ztna_audit - INFO - Issued new MFA secret/QR for registration.
+2025-11-08 23:55:16,131 - ztna_audit - INFO - SUCCESS: New user registered: snigdha_6106 (Role: Finance)
+2025-11-08 23:55:40,563 - ztna_audit - INFO - Login Step 1 OK for snigdha_6106. MFA required.
+2025-11-08 23:55:45,575 - ztna_audit - INFO - MFA verified. Full ZTNA token issued for user: snigdha_6106
+2025-11-08 23:55:50,262 - ztna_audit - INFO - Access GRANTED to financeDB for 690f8b0c58ff12faa612b2a1
+2025-11-08 23:56:06,095 - ztna_audit - INFO - Access DENIED to hrPortal for 690f8b0c58ff12faa612b2a1: Role 'Finance' not authorized
+2025-11-08 23:57:07,797 - ztna_audit - INFO - ZTNA Audit Logger initialized.
+2025-11-08 23:57:07,801 - ztna_audit - INFO - ✅ Connected to Redis server.
+2025-11-08 23:57:07,807 - ztna_audit - INFO - ✅ Connected to MongoDB server.
+2025-11-09 00:07:03,055 - ztna_audit - INFO - ZTNA Audit Logger initialized.
+2025-11-09 00:07:03,062 - ztna_audit - INFO - ✅ Connected to Redis server.
+2025-11-09 00:07:03,084 - ztna_audit - INFO - ✅ Connected to MongoDB server.
+2025-11-09 00:07:51,161 - ztna_audit - INFO - Issued new MFA secret/QR for registration.
+2025-11-09 00:08:07,614 - ztna_audit - INFO - SUCCESS: New user registered: somesh (Role: HR)
+2025-11-09 00:08:30,663 - ztna_audit - INFO - Login Step 1 OK for somesh. MFA required.
+2025-11-09 00:08:38,969 - ztna_audit - INFO - MFA verified. Full ZTNA token issued for user: somesh
+2025-11-09 00:08:41,613 - ztna_audit - INFO - Policy 690f8a97ec64a1919749e0c4 GRANTED for 690f8e0fe6d3ea3b3e79a329
+2025-11-09 00:08:41,614 - ztna_audit - INFO - Access GRANTED to hrPortal for 690f8e0fe6d3ea3b3e79a329
+2025-11-09 00:08:43,631 - ztna_audit - INFO - Access DENIED to financeDB for 690f8e0fe6d3ea3b3e79a329: No valid policy found for IP 127.0.0.1 at time 18:38:43.630297
+2025-11-09 00:08:54,819 - ztna_audit - INFO - Access GRANTED to any for 690f8e0fe6d3ea3b3e79a329
+2025-11-09 00:08:54,838 - ztna_audit - INFO - Issued new MFA secret for reset (pending) for user 690f8e0fe6d3ea3b3e79a329
+2025-11-09 00:09:07,182 - ztna_audit - INFO - Access GRANTED to any for 690f8e0fe6d3ea3b3e79a329
+2025-11-09 00:09:07,186 - ztna_audit - INFO - MFA Reset SUCCESS for user 690f8e0fe6d3ea3b3e79a329
+2025-11-09 00:09:14,103 - ztna_audit - INFO - Access GRANTED to any for 690f8e0fe6d3ea3b3e79a329
+2025-11-09 00:09:14,104 - ztna_audit - INFO - Token revoked (logout) for user: 690f8e0fe6d3ea3b3e79a329
+2025-11-09 00:13:19,009 - ztna_audit - INFO - ZTNA Audit Logger initialized.
+2025-11-09 00:13:19,016 - ztna_audit - INFO - ✅ Connected to Redis server.
+2025-11-09 00:13:19,047 - ztna_audit - INFO - ✅ Connected to MongoDB server.
+2025-11-09 00:14:34,264 - ztna_audit - INFO - ZTNA Audit Logger initialized.
+2025-11-09 00:14:34,267 - ztna_audit - INFO - ✅ Connected to Redis server.
+2025-11-09 00:14:34,273 - ztna_audit - INFO - ✅ Connected to MongoDB server.
+2025-11-09 00:14:34,674 - ztna_audit - INFO - ZTNA Audit Logger initialized.
+2025-11-09 00:14:34,677 - ztna_audit - INFO - ✅ Connected to Redis server.
+2025-11-09 00:14:34,681 - ztna_audit - INFO - ✅ Connected to MongoDB server.
+2025-11-09 00:14:59,108 - ztna_audit - INFO - Issued new MFA secret/QR for registration.
+2025-11-09 00:15:20,410 - ztna_audit - INFO - SUCCESS: New user registered: snigdha_6106 (Role: Finance)
+2025-11-09 00:15:30,243 - ztna_audit - INFO - Login Step 1 OK for snigdha_6106. MFA required.
+2025-11-09 00:15:34,573 - ztna_audit - INFO - MFA verified. Full ZTNA token issued for user: snigdha_6106
+2025-11-09 00:16:04,356 - ztna_audit - INFO - Policy 690f8f48d4bf522f1cdd6ac2 DENIED for 690f8fc0a1f9b91c5258faa1: Access after 17:00 UTC
+2025-11-09 00:16:04,357 - ztna_audit - INFO - Access DENIED to financeDB for 690f8fc0a1f9b91c5258faa1: No valid policy found for IP 127.0.0.1 at time 18:46:04.349633
+2025-11-09 00:16:18,004 - ztna_audit - INFO - Access DENIED to hrPortal for 690f8fc0a1f9b91c5258faa1: No valid policy found for IP 127.0.0.1 at time 18:46:18.003259
+2025-11-09 00:16:51,624 - ztna_audit - INFO - Access GRANTED to any for 690f8fc0a1f9b91c5258faa1
+2025-11-09 00:16:51,634 - ztna_audit - INFO - Token revoked (logout) for user: 690f8fc0a1f9b91c5258faa1
+2025-11-09 00:16:59,241 - ztna_audit - INFO - Login Step 1 OK for admin. MFA required.
+2025-11-09 00:17:23,973 - ztna_audit - INFO - Failed MFA attempt for user: admin (Invalid code)
+2025-11-09 00:18:29,734 - ztna_audit - INFO - Login Step 1 OK for snigdha_6106. MFA required.
+2025-11-09 00:18:41,142 - ztna_audit - INFO - Login Step 1 OK for snigdha_6106. MFA required.
+2025-11-09 00:18:47,011 - ztna_audit - INFO - MFA verified. Full ZTNA token issued for user: snigdha_6106
+2025-11-09 00:18:51,768 - ztna_audit - INFO - Access GRANTED to any for 690f8fc0a1f9b91c5258faa1
+2025-11-09 00:18:51,791 - ztna_audit - INFO - Issued new MFA secret for reset (pending) for user 690f8fc0a1f9b91c5258faa1
+2025-11-09 00:19:04,777 - ztna_audit - INFO - Access GRANTED to any for 690f8fc0a1f9b91c5258faa1
+2025-11-09 00:19:04,780 - ztna_audit - INFO - MFA Reset SUCCESS for user 690f8fc0a1f9b91c5258faa1
+2025-11-09 00:19:53,928 - ztna_audit - INFO - Access GRANTED to any for 690f8fc0a1f9b91c5258faa1
+2025-11-09 00:19:53,931 - ztna_audit - INFO - Token revoked (logout) for user: 690f8fc0a1f9b91c5258faa1
+2025-11-09 00:25:11,857 - ztna_audit - INFO - ZTNA Audit Logger initialized.
+2025-11-09 00:25:11,878 - ztna_audit - INFO - ✅ Connected to Redis server.
+2025-11-09 00:25:11,897 - ztna_audit - INFO - ✅ Connected to MongoDB server.
+2025-11-09 00:29:33,578 - ztna_audit - INFO - ZTNA Audit Logger initialized.
+2025-11-09 00:29:33,583 - ztna_audit - INFO - ✅ Connected to Redis server.
+2025-11-09 00:29:33,589 - ztna_audit - INFO - ✅ Connected to MongoDB server.
+2025-11-09 00:30:06,089 - ztna_audit - INFO - Issued new MFA secret/QR for registration.
+2025-11-09 00:30:16,563 - ztna_audit - INFO - SUCCESS: New user registered: snigdha_6106 (Role: Finance)
+2025-11-09 00:30:32,886 - ztna_audit - INFO - Login Step 1 OK for snigdha_6106. MFA required.
+2025-11-09 00:30:37,727 - ztna_audit - INFO - MFA verified. Full ZTNA token issued for user: snigdha_6106
+2025-11-09 00:31:07,878 - ztna_audit - INFO - Policy 690f92112f0070a8b7d6683a DENIED for 690f93408c90b54bd086b911: Access after 17:00 UTC
+2025-11-09 00:31:07,879 - ztna_audit - INFO - Access DENIED to financeDB for 690f93408c90b54bd086b911: No valid policy found for IP 127.0.0.1 at time 19:01:07.873548
+2025-11-09 00:31:09,853 - ztna_audit - INFO - Access DENIED to hrPortal for 690f93408c90b54bd086b911: No valid policy found for IP 127.0.0.1 at time 19:01:09.852960
+2025-11-09 00:31:19,383 - ztna_audit - INFO - Access GRANTED to any for 690f93408c90b54bd086b911
+2025-11-09 00:31:19,385 - ztna_audit - INFO - Token revoked (logout) for user: 690f93408c90b54bd086b911
+2025-11-09 00:31:36,523 - ztna_audit - INFO - Issued new MFA secret/QR for registration.
+2025-11-09 00:31:46,964 - ztna_audit - INFO - SUCCESS: New user registered: somesh (Role: HR)
+2025-11-09 00:32:01,155 - ztna_audit - INFO - Login Step 1 OK for somesh. MFA required.
+2025-11-09 00:32:06,789 - ztna_audit - INFO - MFA verified. Full ZTNA token issued for user: somesh
+2025-11-09 00:32:15,083 - ztna_audit - INFO - Access DENIED to financeDB for 690f939a8c90b54bd086b912: No valid policy found for IP 127.0.0.1 at time 19:02:15.081215
+2025-11-09 00:32:18,519 - ztna_audit - INFO - Policy 690f92112f0070a8b7d6683b GRANTED for 690f939a8c90b54bd086b912
+2025-11-09 00:32:18,520 - ztna_audit - INFO - Access GRANTED to hrPortal for 690f939a8c90b54bd086b912
+2025-11-09 00:32:31,284 - ztna_audit - INFO - Access GRANTED to any for 690f939a8c90b54bd086b912
+2025-11-09 00:32:31,302 - ztna_audit - INFO - Issued new MFA secret for reset (pending) for user 690f939a8c90b54bd086b912
+2025-11-09 00:32:40,008 - ztna_audit - INFO - Access GRANTED to any for 690f939a8c90b54bd086b912
+2025-11-09 00:32:40,010 - ztna_audit - INFO - MFA Reset SUCCESS for user 690f939a8c90b54bd086b912
+2025-11-09 00:32:44,942 - ztna_audit - INFO - Access GRANTED to any for 690f939a8c90b54bd086b912
+2025-11-09 00:32:44,943 - ztna_audit - INFO - Token revoked (logout) for user: 690f939a8c90b54bd086b912
+2025-11-09 00:33:16,210 - ztna_audit - INFO - Issued new MFA secret/QR for registration.
+2025-11-09 00:33:55,374 - ztna_audit - INFO - Issued new MFA secret/QR for registration.
+2025-11-09 00:34:14,611 - ztna_audit - INFO - SUCCESS: New user registered: admin1 (Role: admin)
+2025-11-09 00:34:23,082 - ztna_audit - INFO - Login Step 1 OK for admin1. MFA required.
+2025-11-09 00:34:29,104 - ztna_audit - INFO - MFA verified. Full ZTNA token issued for user: admin1
+2025-11-09 00:34:35,525 - ztna_audit - INFO - Access DENIED to financeDB for 690f942e8c90b54bd086b913: No valid policy found for IP 127.0.0.1 at time 19:04:35.524458
+2025-11-09 00:34:37,141 - ztna_audit - INFO - Access DENIED to hrPortal for 690f942e8c90b54bd086b913: No valid policy found for IP 127.0.0.1 at time 19:04:37.140401
+2025-11-09 00:34:45,013 - ztna_audit - INFO - Policy 690f92112f0070a8b7d6683c GRANTED for 690f942e8c90b54bd086b913
+2025-11-09 00:34:45,013 - ztna_audit - INFO - Access GRANTED to adminPanel for 690f942e8c90b54bd086b913
+2025-11-09 00:35:31,330 - ztna_audit - INFO - Policy 690f92112f0070a8b7d6683c GRANTED for 690f942e8c90b54bd086b913
+2025-11-09 00:35:31,331 - ztna_audit - INFO - Access GRANTED to adminPanel for 690f942e8c90b54bd086b913
+2025-11-09 00:35:31,332 - ztna_audit - INFO - Admin 690f942e8c90b54bd086b913 CREATED policy 690f947b8c90b54bd086b914
+2025-11-09 00:35:31,344 - ztna_audit - INFO - Policy 690f92112f0070a8b7d6683c GRANTED for 690f942e8c90b54bd086b913
+2025-11-09 00:35:31,344 - ztna_audit - INFO - Access GRANTED to adminPanel for 690f942e8c90b54bd086b913
+2025-11-09 00:35:41,351 - ztna_audit - INFO - Access GRANTED to any for 690f942e8c90b54bd086b913
+2025-11-09 00:35:41,352 - ztna_audit - INFO - Token revoked (logout) for user: 690f942e8c90b54bd086b913
+2025-11-09 00:35:58,291 - ztna_audit - INFO - Issued new MFA secret/QR for registration.
+2025-11-09 00:36:11,064 - ztna_audit - INFO - SUCCESS: New user registered: alice (Role: Engineering)
+2025-11-09 00:36:19,997 - ztna_audit - INFO - Login Step 1 OK for alice. MFA required.
+2025-11-09 00:36:25,932 - ztna_audit - INFO - MFA verified. Full ZTNA token issued for user: alice
+2025-11-09 00:36:28,141 - ztna_audit - INFO - Access DENIED to financeDB for 690f94a38c90b54bd086b915: No valid policy found for IP 127.0.0.1 at time 19:06:28.139306
+2025-11-09 00:36:30,339 - ztna_audit - INFO - Policy 690f947b8c90b54bd086b914 GRANTED for 690f94a38c90b54bd086b915
+2025-11-09 00:36:30,339 - ztna_audit - INFO - Access GRANTED to hrPortal for 690f94a38c90b54bd086b915
+2025-11-09 00:36:38,550 - ztna_audit - INFO - Access GRANTED to any for 690f94a38c90b54bd086b915
+2025-11-09 00:36:38,552 - ztna_audit - INFO - Token revoked (logout) for user: 690f94a38c90b54bd086b915
+2025-11-09 00:37:41,779 - ztna_audit - INFO - ZTNA Audit Logger initialized.
+2025-11-09 00:37:41,784 - ztna_audit - INFO - ✅ Connected to Redis server.
+2025-11-09 00:37:41,792 - ztna_audit - INFO - ✅ Connected to MongoDB server.
+2025-11-09 00:38:25,070 - ztna_audit - INFO - ZTNA Audit Logger initialized.
+2025-11-09 00:38:25,073 - ztna_audit - INFO - ✅ Connected to Redis server.
+2025-11-09 00:38:25,080 - ztna_audit - INFO - ✅ Connected to MongoDB server.
+2025-11-09 00:38:25,491 - ztna_audit - INFO - ZTNA Audit Logger initialized.
+2025-11-09 00:38:25,495 - ztna_audit - INFO - ✅ Connected to Redis server.
+2025-11-09 00:38:25,500 - ztna_audit - INFO - ✅ Connected to MongoDB server.
+2025-11-09 00:38:54,755 - ztna_audit - INFO - Issued new MFA secret/QR for registration.
+2025-11-09 00:39:05,070 - ztna_audit - INFO - SUCCESS: New user registered: snigdha_6106 (Role: Finance)
+2025-11-09 00:39:24,096 - ztna_audit - INFO - Login Step 1 OK for snigdha_6106. MFA required.
+2025-11-09 00:39:34,464 - ztna_audit - INFO - MFA verified. Full ZTNA token issued for user: snigdha_6106
+2025-11-09 00:39:57,138 - ztna_audit - INFO - Policy 690f94ff106745a76dfca437 DENIED for 690f955173aad7c136b0d02f: Access after 17:00 UTC
+2025-11-09 00:39:57,139 - ztna_audit - INFO - Access DENIED to financeDB for 690f955173aad7c136b0d02f: No valid policy found for IP 127.0.0.1 at time 19:09:57.134331
+2025-11-09 00:40:03,386 - ztna_audit - INFO - Access DENIED to hrPortal for 690f955173aad7c136b0d02f: No valid policy found for IP 127.0.0.1 at time 19:10:03.385122
+2025-11-09 00:40:17,777 - ztna_audit - INFO - Access GRANTED to any for 690f955173aad7c136b0d02f
+2025-11-09 00:40:17,798 - ztna_audit - INFO - Issued new MFA secret for reset (pending) for user 690f955173aad7c136b0d02f
+2025-11-09 00:40:27,170 - ztna_audit - INFO - Access GRANTED to any for 690f955173aad7c136b0d02f
+2025-11-09 00:40:27,172 - ztna_audit - INFO - MFA Reset SUCCESS for user 690f955173aad7c136b0d02f
+2025-11-09 00:40:31,743 - ztna_audit - INFO - Access GRANTED to any for 690f955173aad7c136b0d02f
+2025-11-09 00:40:31,745 - ztna_audit - INFO - Token revoked (logout) for user: 690f955173aad7c136b0d02f
+2025-11-09 00:40:39,003 - ztna_audit - INFO - Failed login attempt for user: somesh (Invalid credentials)
+2025-11-09 00:40:45,364 - ztna_audit - INFO - Failed login attempt for user: somesh (Invalid credentials)
+2025-11-09 00:40:47,146 - ztna_audit - INFO - Failed login attempt for user: somesh1 (Invalid credentials)
+2025-11-09 00:40:53,234 - ztna_audit - INFO - Failed login attempt for user: alice (Invalid credentials)
+2025-11-09 00:40:59,700 - ztna_audit - INFO - Failed login attempt for user: somesh (Invalid credentials)
+2025-11-09 00:41:11,832 - ztna_audit - INFO - Failed login attempt for user: somesh (Invalid credentials)
+2025-11-09 00:41:26,604 - ztna_audit - INFO - Failed login attempt for user: xyz (Invalid credentials)
+2025-11-09 00:41:26,980 - ztna_audit - INFO - Failed login attempt for user: xyz (Invalid credentials)
+2025-11-09 00:41:27,190 - ztna_audit - INFO - Failed login attempt for user: xyz (Invalid credentials)
+2025-11-09 00:41:27,377 - ztna_audit - INFO - Failed login attempt for user: xyz (Invalid credentials)
+2025-11-09 00:41:27,565 - ztna_audit - INFO - Failed login attempt for user: xyz (Invalid credentials)
+2025-11-09 00:41:27,719 - ztna_audit - INFO - Failed login attempt for user: xyz (Invalid credentials)
+2025-11-09 00:41:42,653 - ztna_audit - INFO - Issued new MFA secret/QR for registration.
+2025-11-09 00:41:53,733 - ztna_audit - INFO - SUCCESS: New user registered: somesh (Role: HR)
+2025-11-09 00:42:07,848 - ztna_audit - INFO - Login Step 1 OK for somesh. MFA required.
+2025-11-09 00:42:13,683 - ztna_audit - INFO - MFA verified. Full ZTNA token issued for user: somesh
+2025-11-09 00:42:26,433 - ztna_audit - INFO - Access DENIED to financeDB for 690f95f973aad7c136b0d030: No valid policy found for IP 127.0.0.1 at time 19:12:26.431734
+2025-11-09 00:42:32,686 - ztna_audit - INFO - Policy 690f94ff106745a76dfca438 GRANTED for 690f95f973aad7c136b0d030
+2025-11-09 00:42:32,686 - ztna_audit - INFO - Access GRANTED to hrPortal for 690f95f973aad7c136b0d030
+2025-11-09 00:42:38,003 - ztna_audit - INFO - Access GRANTED to any for 690f95f973aad7c136b0d030
+2025-11-09 00:42:38,005 - ztna_audit - INFO - Token revoked (logout) for user: 690f95f973aad7c136b0d030
+2025-11-09 00:42:53,046 - ztna_audit - INFO - Issued new MFA secret/QR for registration.
+2025-11-09 00:43:05,372 - ztna_audit - INFO - SUCCESS: New user registered: admin1 (Role: admin)
+2025-11-09 00:43:23,367 - ztna_audit - INFO - Login Step 1 OK for admin1. MFA required.
+2025-11-09 00:43:28,527 - ztna_audit - INFO - MFA verified. Full ZTNA token issued for user: admin1
+2025-11-09 00:43:33,013 - ztna_audit - INFO - Policy 690f94ff106745a76dfca439 GRANTED for 690f964173aad7c136b0d031
+2025-11-09 00:43:33,013 - ztna_audit - INFO - Access GRANTED to adminPanel for 690f964173aad7c136b0d031
+2025-11-09 00:43:52,329 - ztna_audit - INFO - Policy 690f94ff106745a76dfca439 GRANTED for 690f964173aad7c136b0d031
+2025-11-09 00:43:52,330 - ztna_audit - INFO - Access GRANTED to adminPanel for 690f964173aad7c136b0d031
+2025-11-09 00:43:52,331 - ztna_audit - INFO - Admin 690f964173aad7c136b0d031 CREATED policy 690f967073aad7c136b0d032
+2025-11-09 00:43:52,336 - ztna_audit - INFO - Policy 690f94ff106745a76dfca439 GRANTED for 690f964173aad7c136b0d031
+2025-11-09 00:43:52,336 - ztna_audit - INFO - Access GRANTED to adminPanel for 690f964173aad7c136b0d031
+2025-11-09 00:44:10,092 - ztna_audit - INFO - Access GRANTED to any for 690f964173aad7c136b0d031
+2025-11-09 00:44:10,093 - ztna_audit - INFO - Token revoked (logout) for user: 690f964173aad7c136b0d031
+2025-11-09 00:44:17,830 - ztna_audit - INFO - Login Step 1 OK for snigdha_6106. MFA required.
+2025-11-09 00:44:24,000 - ztna_audit - INFO - MFA verified. Full ZTNA token issued for user: snigdha_6106
+2025-11-09 00:44:26,667 - ztna_audit - INFO - Policy 690f94ff106745a76dfca437 DENIED for 690f955173aad7c136b0d02f: Access after 17:00 UTC
+2025-11-09 00:44:26,667 - ztna_audit - INFO - Access DENIED to financeDB for 690f955173aad7c136b0d02f: No valid policy found for IP 127.0.0.1 at time 19:14:26.665905
+2025-11-09 00:44:28,283 - ztna_audit - INFO - Policy 690f967073aad7c136b0d032 GRANTED for 690f955173aad7c136b0d02f
+2025-11-09 00:44:28,283 - ztna_audit - INFO - Access GRANTED to hrPortal for 690f955173aad7c136b0d02f
+2025-11-09 00:44:37,082 - ztna_audit - INFO - Access GRANTED to any for 690f955173aad7c136b0d02f
+2025-11-09 00:44:37,083 - ztna_audit - INFO - Token revoked (logout) for user: 690f955173aad7c136b0d02f
+2025-11-09 01:05:35,286 - ztna_audit - INFO - ZTNA Audit Logger initialized.
+2025-11-09 01:05:35,293 - ztna_audit - INFO - ✅ Connected to Redis server.
+2025-11-09 01:05:35,308 - ztna_audit - INFO - ✅ Connected to MongoDB server.

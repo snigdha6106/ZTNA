@@ -1,0 +1,306 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZTNA Pro Demo - Login</title>
+    
+<style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        background-color: #0f172a;
+        color: #e2e8f0;
+        line-height: 1.6;
+        min-height: 100vh;
+        overflow-x: hidden;
+        background: linear-gradient(135deg, #0f172a, #1e293b, #334155, #0f172a);
+        background-size: 400% 400%;
+        animation: gradientBG 25s ease infinite;
+        display: flex; /* --- NEW: Flex column to push footer down --- */
+        flex-direction: column; /* --- NEW --- */
+    }
+    @keyframes gradientBG {
+        0% { background-position: 0% 50%; }
+        50% { background-position: 100% 50%; }
+        100% { background-position: 0% 50%; }
+    }
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 2rem;
+        background: rgba(15, 23, 42, 0.6);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        border-bottom: 1px solid rgba(51, 65, 85, 0.5);
+        position: fixed;
+        width: 100%;
+        top: 0;
+        z-index: 1000;
+        animation: slideInDown 0.5s ease-out;
+    }
+    @keyframes slideInDown {
+        from { transform: translateY(-100%); }
+        to { transform: translateY(0); }
+    }
+    nav .logo { font-size: 1.5rem; font-weight: 700; color: #fff; text-decoration: none; }
+    nav .logo span { color: #38bdf8; }
+    nav .nav-links { display: flex; gap: 1.5rem; list-style: none; }
+    nav .nav-links a, .nav-links button {
+        text-decoration: none;
+        color: #cbd5e1;
+        font-weight: 500;
+        padding: 0.5rem 1rem;
+        border: 2px solid transparent;
+        border-radius: 99px;
+        background: none;
+        cursor: pointer;
+        font-family: inherit;
+        font-size: 1rem;
+        transition: all 0.3s ease;
+    }
+    nav .nav-links a:hover, .nav-links button:hover { color: #fff; background-color: rgba(56, 189, 248, 0.1); }
+    nav .nav-links a.button-primary, .nav-links button.button-primary {
+        background-color: #38bdf8;
+        color: #0f172a;
+        font-weight: 700;
+    }
+    nav .nav-links a.button-primary:hover, .nav-links button.button-primary:hover {
+        background-color: #7dd3fc;
+        color: #0f172a;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 20px rgba(56, 189, 248, 0.3);
+    }
+    nav .nav-links a.button-secondary { border-color: #334155; }
+    nav .nav-links a.button-secondary:hover { border-color: #38bdf8; color: #fff; }
+    
+    .container {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 2rem;
+        padding-top: 8rem;
+        width: 100%; /* --- NEW --- */
+        flex-grow: 1; /* --- NEW: Makes container grow to fill space --- */
+    }
+    
+    .form-card {
+        background: rgba(30, 41, 59, 0.7);
+        backdrop-filter: blur(15px);
+        -webkit-backdrop-filter: blur(15px);
+        border: 1px solid rgba(51, 65, 85, 0.5);
+        border-radius: 16px;
+        padding: 2.5rem;
+        max-width: 450px;
+        margin: 2rem auto;
+        box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+        animation: fadeIn 0.7s ease-out;
+    }
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+    .form-card h1 { text-align: center; color: #fff; margin-bottom: 2rem; font-weight: 600; }
+    .form-group { margin-bottom: 1.5rem; }
+    .form-group label { display: block; margin-bottom: 0.5rem; color: #94a3b8; font-weight: 500; }
+    .form-group input, .form-group select, .form-group textarea {
+        width: 100%;
+        padding: 0.75rem 1rem;
+        background: #1e293b;
+        border: 1px solid #334155;
+        border-radius: 8px;
+        color: #e2e8f0;
+        font-size: 1rem;
+        transition: all 0.3s ease;
+        font-family: inherit;
+    }
+    .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+        outline: none;
+        border-color: #38bdf8;
+        box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.3);
+    }
+    .form-group select option { background: #1e293b; }
+    .btn-submit {
+        width: 100%;
+        padding: 0.75rem 1.5rem;
+        background-color: #38bdf8;
+        color: #0f172a;
+        font-weight: 700;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        font-size: 1.1rem;
+        transition: all 0.3s ease;
+    }
+    .btn-submit:hover {
+        background-color: #7dd3fc;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 20px rgba(56, 189, 248, 0.3);
+    }
+    .btn-submit:disabled {
+        background-color: #334155;
+        color: #94a3b8;
+        cursor: not-allowed;
+    }
+    .message {
+        text-align: center;
+        margin-top: 1.5rem;
+        padding: 0.75rem;
+        border-radius: 8px;
+        font-weight: 500;
+    }
+    .message.success { background-color: rgba(22, 163, 74, 0.2); color: #4ade80; }
+    .message.error { background-color: rgba(239, 68, 68, 0.2); color: #f87171; }
+    
+    .qr-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #fff;
+        padding: 1rem;
+        border-radius: 8px;
+        margin-bottom: 1.5rem;
+    }
+    .qr-container img { width: 200px; height: 200px; }
+    
+    .dashboard-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+    }
+    @media (max-width: 768px) { .dashboard-grid { grid-template-columns: 1fr; } }
+    
+    .dashboard-card {
+        background: rgba(30, 41, 59, 0.7);
+        border: 1px solid rgba(51, 65, 85, 0.5);
+        border-radius: 16px;
+        padding: 2rem;
+        animation: fadeIn 0.7s ease-out;
+        margin-bottom: 2rem;
+    }
+    .dashboard-card h3 {
+        color: #fff;
+        border-bottom: 1px solid #334155;
+        padding-bottom: 0.5rem;
+        margin-bottom: 1rem;
+    }
+    .controls { display: flex; flex-wrap: wrap; gap: 1rem; }
+    .controls button {
+        padding: 0.75rem 1.5rem;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        font-size: 1rem;
+        font-weight: 600;
+        transition: all 0.3s ease;
+    }
+    #financeBtn { background-color: #22c55e; color: #fff; }
+    #hrBtn { background-color: #0ea5e9; color: #fff; }
+    #financeBtn:hover, #hrBtn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    }
+    #results {
+        margin-top: 1.5rem;
+        padding: 1.5rem;
+        min-height: 100px;
+        background: #0f172a;
+        border: 1px solid #334155;
+        border-radius: 8px;
+    }
+    pre {
+        background: #0f172a;
+        color: #e2e8f0;
+        padding: 0;
+        border-radius: 4px;
+        overflow-x: auto;
+        white-space: pre-wrap;
+        word-wrap: break-word;
+    }
+
+    /* --- NEW Footer CSS --- */
+    footer {
+        text-align: center;
+        padding: 2rem 1rem;
+        margin-top: 4rem; /* Will be pushed down by flex-grow */
+        color: #94a3b8;
+        border-top: 1px solid rgba(51, 65, 85, 0.5);
+        font-size: 0.9rem;
+        animation: fadeIn 1s ease-out;
+        width: 100%;
+    }
+    footer a {
+        color: #38bdf8;
+        text-decoration: none;
+    }
+    footer a:hover {
+        text-decoration: underline;
+    }
+</style>
+
+</head>
+<body>
+    <nav>
+        <a href="/" class="logo">ZTNA<span>Pro</span></a>
+        <ul class="nav-links">
+            <li><a href="/login" class="button-secondary">Login</a></li>
+            <li><a href="/register" class="button-primary">Register</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <form class="form-card" id="loginForm">
+            <h1>Secure Login</h1>
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" required>
+            </div>
+            <button type="button" class="btn-submit" id="submitBtn">Continue</button>
+            <div id="message" class="message"></div>
+        </form>
+    </div>
+    <script>
+        const form = document.getElementById('loginForm');
+        const submitBtn = document.getElementById('submitBtn');
+        const messageEl = document.getElementById('message');
+        submitBtn.addEventListener('click', async (e) => {
+            e.preventDefault();
+            messageEl.textContent = 'Verifying...';
+            messageEl.className = 'message';
+            submitBtn.disabled = true;
+            const payload = {
+                username: document.getElementById('username').value,
+                password: document.getElementById('password').value
+            };
+            try {
+                const response = await fetch('/api/login', {
+                    method: 'POST',
+                    headers: { 
+                        'Content-Type': 'application/json',
+                        'User-Agent': navigator.userAgent
+                    },
+                    body: JSON.stringify(payload)
+                });
+                const data = await response.json();
+                if (!response.ok) { throw new Error(data.message || 'Login failed.'); }
+                localStorage.setItem('mfa_temp_token', data.mfa_token);
+                window.location.href = '/verify-mfa';
+            } catch (error) {
+                messageEl.textContent = error.message;
+                messageEl.className = 'message error';
+                submitBtn.disabled = false;
+            }
+        });
+    </script>
+    
+<footer>
+    <p>&copy; 2025 ZTNA Pro Demo. All rights reserved. This is a fictional demo for educational purposes.</p>
+    <p>Built with Flask, MongoDB, Redis, and PyJWT.</p>
+</footer>
+
+</body>
+</html>

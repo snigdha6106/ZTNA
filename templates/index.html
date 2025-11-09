@@ -1,0 +1,145 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ZTNA Demo - Login</title>
+    <style>
+        body { font-family: sans-serif; display: grid; place-items: center; min-height: 90vh; background-color: #f4f4f4; }
+        #container { background: #fff; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); padding: 2rem; width: 350px; }
+        h1 { text-align: center; color: #333; }
+        div { margin-bottom: 1rem; }
+        label { display: block; margin-bottom: 0.5rem; font-weight: bold; }
+        input { width: 100%; padding: 0.5rem; box-sizing: border-box; border: 1px solid #ccc; border-radius: 4px; }
+        button { width: 100%; padding: 0.75rem; background-color: #007bff; color: white; border: none; border-radius: 4px; cursor: pointer; font-size: 1rem; }
+        button:hover { background-color: #0056b3; }
+        #message { margin-top: 1rem; text-align: center; font-weight: bold; }
+        .success { color: green; }
+        .error { color: red; }
+        #mfa_group { display: none; } /* Hidden by default */
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h1 id="form_title">ZTNA Access Portal</h1>
+        <form id="loginForm">
+            <!-- These are always visible -->
+            <div id="username_group">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" value="userX">
+            </div>
+            <div id="password_group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" value="pass123">
+            </div>
+
+            <!-- This is shown only for Step 2 (MFA) -->
+            <div id="mfa_group">
+                <label for="mfa_code">Authenticator Code:</label>
+                <input type="text" id="mfa_code" name="mfa_code" autocomplete="off">
+            </div>
+            
+            <button type="submit" id="login_button">Login & Verify Device</button>
+        </form>
+        <div id="message"></div>
+    </div>
+
+    <script>
+        // Store the state of our login form
+        let loginState = 'step1_credentials';
+        let tempMfaToken = null;
+
+        const form = document.getElementById('loginForm');
+        const messageEl = document.getElementById('message');
+        
+        form.addEventListener('submit', async function(e) {
+            e.preventDefault();
+            messageEl.textContent = "Verifying...";
+            messageEl.className = "";
+
+            if (loginState === 'step1_credentials') {
+                await handleStep1_Login();
+            } else if (loginState === 'step2_mfa') {
+                await handleStep2_MFA();
+            }
+        });
+
+        async function handleStep1_Login() {
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            try {
+                // FIX: Use relative path
+                const response = await fetch('/login', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)'
+                    },
+                    body: JSON.stringify({ username, password })
+                });
+
+                const data = await response.json();
+
+                if (response.status === 200 && data.token) {
+                    // SUCCESS (No MFA): Store token and redirect
+                    localStorage.setItem('ztna_token', data.token);
+                    window.location.href = '/dashboard';
+                
+                } else if (response.status === 206 && data.mfa_token) {
+                    // MFA REQUIRED: Move to step 2
+                    loginState = 'step2_mfa';
+                    tempMfaToken = data.mfa_token;
+                    
+                    // Update UI for MFA input
+                    document.getElementById('form_title').textContent = "Enter MFA Code";
+                    document.getElementById('username_group').style.display = 'none';
+                    document.getElementById('password_group').style.display = 'none';
+                    document.getElementById('mfa_group').style.display = 'block';
+                    document.getElementById('login_button').textContent = "Verify Code";
+                    messageEl.textContent = "MFA Required. Check your authenticator app.";
+                    messageEl.className = "success";
+
+                } else {
+                    // Other error (bad pass, bad device, etc)
+                    throw new Error(data.message || 'Login failed');
+                }
+
+            } catch (error) {
+                messageEl.textContent = `Error: ${error.message}`;
+                messageEl.className = "error";
+            }
+        }
+
+        async function handleStep2_MFA() {
+            const mfa_code = document.getElementById('mfa_code').value;
+
+            try {
+                // FIX: Use relative path
+                const response = await fetch('/verify-mfa', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ 
+                        mfa_token: tempMfaToken,
+                        mfa_code: mfa_code 
+                    })
+                });
+
+                const data = await response.json();
+
+                if (!response.ok) {
+                    throw new Error(data.message || 'MFA verification failed');
+                }
+
+                // SUCCESS (MFA OK): Store the NEW token and redirect
+                localStorage.setItem('ztna_token', data.token);
+                window.location.href = '/dashboard';
+
+            } catch (error) { // <-- THIS BRACE WAS MISSING
+                messageEl.textContent = `Error: ${error.message}`;
+                messageEl.className = "error";
+            }
+        }
+    </script>
+</body>
+</html>
